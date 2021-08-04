@@ -1,4 +1,4 @@
-const fs = require('fs')
+const fs = require('fs')//file system
 const path = require('path')
 const Sequelize = require('sequelize')
 const config = require('../config/config')
@@ -16,11 +16,12 @@ fs.readdirSync(__dirname)
     file !== 'index.js'
   )
   .forEach((file) => {
-    const model = sequelize.import(path.join(__dirname, file))
-    db[model.name] = model
+    //const model = sequelize.import(path.join(__dirname, file))old version
+    const model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes)//new version
+    db[model.name] = model;
   })
 
   db.sequelize = sequelize
   db.Sequelize = Sequelize
 
-  module.exports = db
+  module.exports = db;
