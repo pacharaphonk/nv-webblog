@@ -1,7 +1,7 @@
 {
-  "name": "nv-webblog-client",
+  "name": "nv-wabblog-client",
   "version": "1.0.0",
-  "description": "nodejs veujs webblog client",
+  "description": "nodejs vuejs webblog client",
   "author": "pacharaphon kakkhunthod",
   "private": true,
   "scripts": {
@@ -10,7 +10,10 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
     "vue": "^2.5.2",
+    "vue-resource": "^1.5.3",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {

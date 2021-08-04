@@ -1,6 +1,6 @@
-# nv-webblog-client
+# nv-wabblog-client
 
-> nodejs veujs webblog client
+> nodejs vuejs webblog client
 
 ## Build Setup
 
